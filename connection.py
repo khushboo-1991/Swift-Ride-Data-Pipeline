@@ -10,7 +10,7 @@ load_dotenv()  # Load environment variables from .env file
 import os
 
 # Pulling Data Generator Function
-from data import generate_uber_ride_confirmation
+from data import generate_swift_ride_confirmation
 
 CONNECTION_STRING = os.getenv("CONNECTION_STRING")
 EVENT_HUBNAME = os.getenv("EVENT_HUBNAME")
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     print("=" * 80)
     print("SINGLE RIDE CONFIRMATION")
     print("=" * 80)
-    ride = generate_uber_ride_confirmation()
+    ride = generate_swift_ride_confirmation()
     print(json.dumps(ride, indent=2))
 
     

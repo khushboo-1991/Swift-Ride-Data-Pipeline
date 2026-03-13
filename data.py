@@ -13,11 +13,11 @@ fake = Faker()
 
 
 VEHICLE_TYPE_MAPPING = [
-    {'vehicle_type_id': 1, 'vehicle_type': 'UberX', 'description': 'Standard', 'base_rate': 2.50, 'per_mile': 1.75, 'per_minute': 0.35},
-    {'vehicle_type_id': 2, 'vehicle_type': 'UberXL', 'description': 'Extra Large', 'base_rate': 3.50, 'per_mile': 2.25, 'per_minute': 0.45},
-    {'vehicle_type_id': 3, 'vehicle_type': 'UberPOOL', 'description': 'Shared Ride', 'base_rate': 2.00, 'per_mile': 1.50, 'per_minute': 0.30},
-    {'vehicle_type_id': 4, 'vehicle_type': 'Uber Comfort', 'description': 'Comfortable', 'base_rate': 3.00, 'per_mile': 2.00, 'per_minute': 0.40},
-    {'vehicle_type_id': 5, 'vehicle_type': 'Uber Black', 'description': 'Premium', 'base_rate': 5.00, 'per_mile': 3.50, 'per_minute': 0.60}
+    {'vehicle_type_id': 1, 'vehicle_type': 'swiftX', 'description': 'Standard', 'base_rate': 2.50, 'per_mile': 1.75, 'per_minute': 0.35},
+    {'vehicle_type_id': 2, 'vehicle_type': 'swiftXL', 'description': 'Extra Large', 'base_rate': 3.50, 'per_mile': 2.25, 'per_minute': 0.45},
+    {'vehicle_type_id': 3, 'vehicle_type': 'swiftPOOL', 'description': 'Shared Ride', 'base_rate': 2.00, 'per_mile': 1.50, 'per_minute': 0.30},
+    {'vehicle_type_id': 4, 'vehicle_type': 'swift Comfort', 'description': 'Comfortable', 'base_rate': 3.00, 'per_mile': 2.00, 'per_minute': 0.40},
+    {'vehicle_type_id': 5, 'vehicle_type': 'swift Black', 'description': 'Premium', 'base_rate': 5.00, 'per_mile': 3.50, 'per_minute': 0.60}
 ]
 
 PAYMENT_METHOD_MAPPING = [
@@ -81,7 +81,7 @@ CANCELLATION_REASON_ID_MAP = {c['cancellation_reason']: c['cancellation_reason_i
 
 
 
-def generate_uber_ride_confirmation():
+def generate_swift_ride_confirmation():
     
     # Generate timestamps
     pickup_time = datetime.now() - timedelta(days=random.randint(0, 30), hours=random.randint(0, 23))

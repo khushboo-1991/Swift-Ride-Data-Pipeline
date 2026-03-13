@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
-from connection import send_to_event_hub, generate_uber_ride_confirmation
+from connection import send_to_event_hub, generate_swift_ride_confirmation
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
@@ -12,7 +12,7 @@ def booking_home(request: Request):
 
 @app.get("/book")
 def book_ride(request: Request):  
-    ride = generate_uber_ride_confirmation()
+    ride = generate_swift_ride_confirmation()
     result = send_to_event_hub(ride)
     return templates.TemplateResponse("confirmation.html", {"request": request})
 
